@@ -1,6 +1,14 @@
 import React, {useState, useRef} from 'react';
-import {View, Text, StyleSheet, Dimensions, TextInput} from 'react-native';
-import {colors, parameters} from '../global/styles';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Dimensions,
+  TextInput,
+  Button,
+  TouchableOpacity,
+} from 'react-native';
+import {colors, parameters} from '../../global/styles';
 import {Icon} from 'react-native-elements';
 import Header from '../../components/Header';
 import * as Animatable from 'react-native-animatable';
@@ -65,6 +73,18 @@ export default function SigninScreen({title}) {
             />
           </Animatable.View>
         </View>
+      </View>
+
+      <View style={{marginHorizontal: 20, marginTop: 30}}>
+        <TouchableOpacity style={parameters.styledButton}>
+          <Text style={parameters.buttonTitle}>SIGN IN</Text>
+        </TouchableOpacity>
+      </View>
+
+      <View >
+        <Text >
+         OR
+        </Text>
       </View>
     </View>
   );

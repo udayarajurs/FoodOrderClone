@@ -8,6 +8,11 @@ import {
   SafeAreaView,
   TouchableOpacity,
 } from 'react-native';
+import SigninScreen from './SigninScreen';
+
+const nana = function name(data) {
+  navigation.navigate(data);
+};
 
 const listTab = [
   {
@@ -34,13 +39,22 @@ const TabScreen = ({navigation}) => {
           <TouchableOpacity
             style={[styles.btnTab, status === e.status && styles.btnTabActive]}
             onPress={() => setStatusFilter(e.status)}>
-            <Text style={styles.textTab , status === e.status && styles.textTabActive}>{e.status}</Text>
+            <Text
+              style={
+                (styles.textTab, status === e.status && styles.textTabActive)
+              }>
+              {e.status}
+            </Text>
           </TouchableOpacity>
         ))}
       </View>
+
+      <Text>{status}</Text>
     </SafeAreaView>
   );
 };
+
+
 
 const styles = StyleSheet.create({
   container: {

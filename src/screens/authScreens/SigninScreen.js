@@ -5,11 +5,10 @@ import {
   StyleSheet,
   Dimensions,
   TextInput,
-  Button,
   TouchableOpacity,
 } from 'react-native';
 import {colors, parameters} from '../../global/styles';
-import {Icon} from 'react-native-elements';
+import {Icon , Button , SocialIcon} from 'react-native-elements';
 import Header from '../../components/Header';
 import * as Animatable from 'react-native-animatable';
 
@@ -81,11 +80,49 @@ export default function SigninScreen({title}) {
         </TouchableOpacity>
       </View>
 
-      <View >
-        <Text >
+      <View style={{alignItems:'center' , marginTop: 15}}>
+        <Text style={{...Styles.text1, textDecorationLine: 'underline'}}>Forgot Password</Text>
+      </View>
+
+      <View style={{alignItems: 'center' , marginTop: 25 , marginBottom: 25}}>
+        <Text style={{fontWeight: 'bold', fontSize: 20}}>
          OR
         </Text>
       </View>
+
+      <View style={{marginHorizontal: 10 , marginTop: 10}}>
+        <SocialIcon 
+          title = 'Sign In with FaceBook'
+          button
+          type='facebook'
+          style={Styles.SocialIcon}
+          onPress = {() => {}}
+        />
+      </View>
+
+      <View style={{marginHorizontal: 10 , marginTop: 10}}>
+        <SocialIcon 
+          title = 'Sign In with Google'
+          button
+          type='google'
+          style={Styles.SocialIcon}
+          onPress = {() => {}}
+        />
+      </View>
+
+      <View style={{marginTop: 15 , marginLeft: 20}}>
+        <Text style={{...Styles.text1}}>Create New accountt</Text>
+      </View>
+
+      <View style={{alignItems: 'flex-end' , marginHorizontal: 20}}>
+        <Button 
+          title = 'Create an account'
+          buttonStyle = {Styles.createButton}
+          titleStyle = {Styles.createButtonTitle}
+        />
+          
+      </View>
+
     </View>
   );
 }
@@ -117,4 +154,26 @@ const Styles = StyleSheet.create({
     alignItems: 'center',
     paddingLeft: 15,
   },
+  SocialIcon:{
+    borderRadius : 12,
+    height: 50
+  },
+  createButton:{
+    backgroundColor: 'white',
+    alignContent:'center',
+    justifyContent: 'center',
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#ff8c52',
+    height: 40,
+    paddingHorizontal: 20,
+  },
+  createButtonTitle : {
+    color: '#ff8c52',
+    fontSize: 16,
+    fontWeight:'bold',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: -3
+  }
 });

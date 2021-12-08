@@ -104,6 +104,7 @@ const Styles = StyleSheet.create({
         borderColor: '#ff8c52',
         height: 40,
         paddingHorizontal: 20,
+ 
       },
       createButtonTitle : {
         color: colors.grey1,

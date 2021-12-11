@@ -13,7 +13,8 @@ import {Icon , Button , SocialIcon} from 'react-native-elements';
 
 import Swiper from 'react-native-swiper';
 
-export default function SigninWelcomeScreen({title}) {
+
+export default function SigninWelcomeScreen({title , navigation}) {
     return (
         <View style={{flex: 1}}>
            <View style={{flex: 3, justifyContent: 'flex-start', alignItems: 'center',padding:20}}>
@@ -54,7 +55,11 @@ export default function SigninWelcomeScreen({title}) {
         <View style={{flex:4, justifyContent: 'center'}}>
 
         <View style={{marginHorizontal: 20, marginTop: 30}}>
-        <TouchableOpacity style={parameters.styledButton}>
+        <TouchableOpacity style={parameters.styledButton}
+            onPress={() => {
+                navigation.navigate("SignInScreen")
+            }}
+        >
           <Text style={parameters.buttonTitle}>SIGN IN</Text>
         </TouchableOpacity>
       </View>
@@ -65,6 +70,9 @@ export default function SigninWelcomeScreen({title}) {
           title = 'Create an account'
           buttonStyle = {Styles.createButton}
           titleStyle = {Styles.createButtonTitle}
+          onPress={() => {
+            navigation.navigate("SignInScreen")
+        }}
         />
         </View>
 

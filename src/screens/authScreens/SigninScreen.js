@@ -12,7 +12,7 @@ import {Icon , Button , SocialIcon} from 'react-native-elements';
 import Header from '../../components/Header';
 import * as Animatable from 'react-native-animatable';
 
-export default function SigninScreen({title}) {
+export default function SigninScreen({title , navigation}) {
   const [textInput2Fossued, setTextInput2Fossued] = useState(false);
 
   const textInput1 = useRef(1);
@@ -20,12 +20,13 @@ export default function SigninScreen({title}) {
 
   return (
     <View style={Styles.container}>
-      <Header title="MY ACCOUNT" />
+      <Header title="MY ACCOUNT" type ="arrow-left" navigation={navigation}/>
 
       <View style={{marginTop: 10, marginLeft: 10}}>
         <Text
           style={title}
-          style={{color: '#ff8c52', fontWeight: 'bold', fontSize: 20}}>
+          style={{color: '#ff8c52', fontWeight: 'bold', fontSize: 20}}
+          >
           Sign-In
         </Text>
       </View>
@@ -75,7 +76,12 @@ export default function SigninScreen({title}) {
       </View>
 
       <View style={{marginHorizontal: 20, marginTop: 30}}>
-        <TouchableOpacity style={parameters.styledButton}>
+        <TouchableOpacity 
+        style={parameters.styledButton}
+        onPress={() => {
+          navigation.navigate("HomeScreen")
+          }}
+        >
           <Text style={parameters.buttonTitle}>SIGN IN</Text>
         </TouchableOpacity>
       </View>

@@ -2,6 +2,7 @@ import React from 'react'
 import { createNativeStackNavigator , TransitionPresets} from '@react-navigation/native-stack';
 import SignInWelcomeScreen from '../screens/authScreens/SigninWelcomeScreen';
 import SignInScreen from '../screens/authScreens/SigninScreen'
+import HomeScreen from '../screens/HomeScreen';
 
 const Auth = createNativeStackNavigator();
 
@@ -25,6 +26,15 @@ export function AuthStack(){
                            
                         }}
                     />  
+
+                    <Auth.Screen 
+                        name ="HomeScreen"
+                        component = {HomeScreen}
+                        options ={{
+                            headerShown: false,
+                           
+                        }}
+                    /> 
        
         </Auth.Navigator>
     )

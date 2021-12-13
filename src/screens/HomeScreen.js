@@ -1,21 +1,21 @@
 import React from "react";
 
-import { View , Text , StyleSheet } from "react-native";
+import { View , Text , StyleSheet , TouchableOpacity} from "react-native";
+import {Icon} from 'react-native-elements'
+import HomeHeader from "../components/HomeHeader";
 
 
 
 export default function HomeScreen(){
     return(
         <View style={styles.container}>
-            <Text>Home Screen</Text>
+            <HomeHeader/>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     container:{
-        flex: 1,
-        justifyContent:'center',
-        alignItems: 'center'
+        flex: 1
     }
 })

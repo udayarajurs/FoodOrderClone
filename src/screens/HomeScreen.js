@@ -1,12 +1,15 @@
 import React,{useState} from "react";
 
-import { View , Text , StyleSheet , TouchableOpacity , ScrollView , FlatList , Pressable , Image} from "react-native";
+import { View , Text , StyleSheet , TouchableOpacity , ScrollView , FlatList , Pressable , Image , Dimensions} from "react-native";
 import { Icon } from  'react-native-elements';
 import HomeHeader from "../components/HomeHeader";
 import { colors } from './../global/styles';
-import {filterData} from '../global/Data'
+import {filterData , restaurantsData} from '../global/Data'
+import FoodCard from './../components/FoodCard';
 
 
+
+const SCREEN_WIDTH = Dimensions.get('window').width
 
 export default function HomeScreen(){
 
@@ -127,6 +130,28 @@ export default function HomeScreen(){
                 <View style={styles.headerTextView}>
                     <Text style={styles.headerText}>Free Delivery now</Text>
                 </View>
+
+              <FlatList 
+               style ={{marginTop:10, marginBottom:10}} 
+               horizontal ={true}
+               data = {restaurantsData}
+               keyExtractor = {(item,index)=>index.toString()}   
+               showsHorizontalScrollIndicator = {false}
+               renderItem = {({item})=>(
+                   <View style ={{marginRight:5}}>
+                       <FoodCard 
+                           screenWidth  ={SCREEN_WIDTH*0.8}
+                           images ={item.images}
+                           restaurantName ={item.restaurantName}
+                           farAway ={item.farAway}
+                           businessAddress ={item.businessAddress}
+                           averageReview ={item.averageReview}
+                           numberOfReview ={item.numberOfReview}
+                           
+                       />
+                   </View>
+               )}  
+            />
 
 
             </ScrollView>

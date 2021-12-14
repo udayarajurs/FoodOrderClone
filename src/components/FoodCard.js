@@ -11,7 +11,7 @@ export default function FoodCard({
     discountAvailable ,
     discountPercent ,
     numberOfReview ,
-    businessAddress ,
+    businessAddress ,   
     farAway ,
     averageReview ,
     images,
@@ -24,6 +24,34 @@ export default function FoodCard({
                     style={{...Styles.image, width:screenWidth}}
                     source={{uri:images}}
                 />
+            </View>
+
+            <View>
+                <View>
+                    <Text style={Styles.restaurantName}>{restaurantName}</Text>
+                </View>
+
+                <View style ={{flex:1, flexDirection:'row'}}>
+                    <View style = {Styles.distance}>
+                    <Icon
+                        name='place'
+                        type='material'
+                        color= {colors.grey2}
+                        size ={18}
+                        iconStyle ={{
+                            marginTop:3
+                        }}
+                    />
+                    <Text style={Styles.Min}>{farAway} Min</Text>
+                    </View>
+                    <View style={{flex:9, flexDirection:'row'}}>
+                        <Text style={Styles.address}>{businessAddress}</Text>
+                    </View>
+                </View>
+            </View>
+            <View style={Styles.review}>
+                    <Text style={Styles.average}>{averageReview}</Text>
+                    <Text style={{fontWeight: 'bold' , color: colors.cardBackground}}>{numberOfReview} reviews</Text>
             </View>
         </TouchableOpacity>
     )
@@ -44,4 +72,55 @@ const Styles = StyleSheet.create({
         borderTopRightRadius:5,
         height:150,
      },
+     restaurantName:{
+        fontSize:17,
+        fontWeight:'bold',
+        color:colors.grey1,  
+        marginTop:5,
+        marginLeft:10
+     },
+
+     distance :{
+        flex:4,flexDirection:'row',
+        borderRightColor:colors.grey4,
+        paddingHorizontal:5,
+        borderRightWidth:1
+     },
+     Min:{
+        fontSize:12,
+        fontWeight:'bold',
+        paddingTop:5,
+        color:colors.grey3 
+     },
+
+     address:{
+        fontSize:12,
+        paddingTop:5,
+        color:colors.grey2,
+        paddingHorizontal:10
+     },
+
+     review :{
+        position:"absolute",
+        top:0,
+        right:10,
+        backgroundColor: colors.grey1,
+        padding:2,alignItems:"center",
+        justifyContent:"center", 
+        borderTopRightRadius:5,
+        borderBottomLeftRadius:12 
+     },
+
+     average:{
+        color:"white",
+         fontSize:20,
+          fontWeight:'bold',
+           marginTop:-3  
+     },
+     numberOfReview :{
+        color:"white", 
+        fontSize:13,
+        marginRight:0,
+        marginLeft:0
+     }
 })

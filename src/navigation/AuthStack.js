@@ -3,6 +3,7 @@ import { createNativeStackNavigator , TransitionPresets} from '@react-navigation
 import SignInWelcomeScreen from '../screens/authScreens/SigninWelcomeScreen';
 import SignInScreen from '../screens/authScreens/SigninScreen'
 import HomeScreen from '../screens/HomeScreen';
+import RootClientTabs from './ClientTabs';
 
 const Auth = createNativeStackNavigator();
 
@@ -28,8 +29,8 @@ export function AuthStack(){
                     />  
 
                     <Auth.Screen 
-                        name ="HomeScreen"
-                        component = {HomeScreen}
+                        name ="RootClientTabs"
+                        component = {RootClientTabs}
                         options ={{
                             headerShown: false,
                            

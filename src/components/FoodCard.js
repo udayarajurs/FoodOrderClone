@@ -24,9 +24,8 @@ export default function FoodCard({
                     style={{...Styles.image, width:screenWidth}}
                     source={{uri:images}}
                 />
-            </View>
 
-            <View>
+<View>
                 <View>
                     <Text style={Styles.restaurantName}>{restaurantName}</Text>
                 </View>
@@ -49,9 +48,11 @@ export default function FoodCard({
                     </View>
                 </View>
             </View>
+            
+            </View>
             <View style={Styles.review}>
                     <Text style={Styles.average}>{averageReview}</Text>
-                    <Text style={{fontWeight: 'bold' , color: colors.cardBackground}}>{numberOfReview} reviews</Text>
+                    <Text style={Styles.numberOfReview}>{numberOfReview} reviews</Text>
             </View>
         </TouchableOpacity>
     )

@@ -8,11 +8,11 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {colors, parameters} from '../../global/styles';
-import {Icon , Button , SocialIcon} from 'react-native-elements';
+import {Icon, Button, SocialIcon} from 'react-native-elements';
 import Header from '../../components/Header';
 import * as Animatable from 'react-native-animatable';
 
-export default function SigninScreen({title , navigation}) {
+export default function SigninScreen({title, navigation}) {
   const [textInput2Fossued, setTextInput2Fossued] = useState(false);
 
   const textInput1 = useRef(1);
@@ -20,13 +20,12 @@ export default function SigninScreen({title , navigation}) {
 
   return (
     <View style={Styles.container}>
-      <Header title="MY ACCOUNT" type ="arrow-left" navigation={navigation}/>
+      <Header title="MY ACCOUNT" type="arrow-left" navigation={navigation} />
 
       <View style={{marginTop: 10, marginLeft: 10}}>
         <Text
           style={title}
-          style={{color: '#ff8c52', fontWeight: 'bold', fontSize: 20}}
-          >
+          style={{color: '#ff8c52', fontWeight: 'bold', fontSize: 20}}>
           Sign-In
         </Text>
       </View>
@@ -76,59 +75,56 @@ export default function SigninScreen({title , navigation}) {
       </View>
 
       <View style={{marginHorizontal: 20, marginTop: 30}}>
-        <TouchableOpacity 
-        style={parameters.styledButton}
-        onPress={() => {
-          navigation.navigate("DrawerNavigator")
-          }}
-        >
+        <TouchableOpacity
+          style={parameters.styledButton}
+          onPress={() => {
+            navigation.navigate('RootClientTabs');
+          }}>
           <Text style={parameters.buttonTitle}>SIGN IN</Text>
         </TouchableOpacity>
       </View>
 
-      <View style={{alignItems:'center' , marginTop: 15}}>
-        <Text style={{...Styles.text1, textDecorationLine: 'underline'}}>Forgot Password</Text>
-      </View>
-
-      <View style={{alignItems: 'center' , marginTop: 25 , marginBottom: 25}}>
-        <Text style={{fontWeight: 'bold', fontSize: 20}}>
-         OR
+      <View style={{alignItems: 'center', marginTop: 15}}>
+        <Text style={{...Styles.text1, textDecorationLine: 'underline'}}>
+          Forgot Password
         </Text>
       </View>
 
-      <View style={{marginHorizontal: 10 , marginTop: 10}}>
-        <SocialIcon 
-          title = 'Sign In with FaceBook'
+      <View style={{alignItems: 'center', marginTop: 25, marginBottom: 25}}>
+        <Text style={{fontWeight: 'bold', fontSize: 20}}>OR</Text>
+      </View>
+
+      <View style={{marginHorizontal: 10, marginTop: 10}}>
+        <SocialIcon
+          title="Sign In with FaceBook"
           button
-          type='facebook'
+          type="facebook"
           style={Styles.SocialIcon}
-          onPress = {() => {}}
+          onPress={() => {}}
         />
       </View>
 
-      <View style={{marginHorizontal: 10 , marginTop: 10}}>
-        <SocialIcon 
-          title = 'Sign In with Google'
+      <View style={{marginHorizontal: 10, marginTop: 10}}>
+        <SocialIcon
+          title="Sign In with Google"
           button
-          type='google'
+          type="google"
           style={Styles.SocialIcon}
-          onPress = {() => {}}
+          onPress={() => {}}
         />
       </View>
 
-      <View style={{marginTop: 15 , marginLeft: 20}}>
+      <View style={{marginTop: 15, marginLeft: 20}}>
         <Text style={{...Styles.text1}}>Create New accountt</Text>
       </View>
 
-      <View style={{alignItems: 'flex-end' , marginHorizontal: 20}}>
-        <Button 
-          title = 'Create an account'
-          buttonStyle = {Styles.createButton}
-          titleStyle = {Styles.createButtonTitle}
+      <View style={{alignItems: 'flex-end', marginHorizontal: 20}}>
+        <Button
+          title="Create an account"
+          buttonStyle={Styles.createButton}
+          titleStyle={Styles.createButtonTitle}
         />
-          
       </View>
-
     </View>
   );
 }
@@ -160,13 +156,13 @@ const Styles = StyleSheet.create({
     alignItems: 'center',
     paddingLeft: 15,
   },
-  SocialIcon:{
-    borderRadius : 12,
-    height: 50
+  SocialIcon: {
+    borderRadius: 12,
+    height: 50,
   },
-  createButton:{
+  createButton: {
     backgroundColor: 'white',
-    alignContent:'center',
+    alignContent: 'center',
     justifyContent: 'center',
     borderRadius: 12,
     borderWidth: 1,
@@ -174,12 +170,12 @@ const Styles = StyleSheet.create({
     height: 40,
     paddingHorizontal: 20,
   },
-  createButtonTitle : {
+  createButtonTitle: {
     color: '#ff8c52',
     fontSize: 16,
-    fontWeight:'bold',
+    fontWeight: 'bold',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: -3
-  }
+    marginTop: -3,
+  },
 });

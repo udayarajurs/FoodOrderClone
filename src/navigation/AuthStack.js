@@ -5,6 +5,7 @@ import SignInScreen from '../screens/authScreens/SigninScreen'
 import HomeScreen from '../screens/HomeScreen';
 import RootClientTabs from './ClientTabs';
 import RestaurantMapScreen from '../screens/RestaurantMapScreen';
+import DrawerNavigator from './DrawerNavigator';
 
 const Auth = createNativeStackNavigator();
 
@@ -30,8 +31,8 @@ export function AuthStack(){
                     />  
 
                     <Auth.Screen 
-                        name ="RootClientTabs"
-                        component = {RootClientTabs}
+                        name ="DrawerNavigator"
+                        component = {DrawerNavigator}
                         options ={{
                             headerShown: false,
                            

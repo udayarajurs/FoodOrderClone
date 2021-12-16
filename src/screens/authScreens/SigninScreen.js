@@ -79,7 +79,7 @@ export default function SigninScreen({title , navigation}) {
         <TouchableOpacity 
         style={parameters.styledButton}
         onPress={() => {
-          navigation.navigate("RootClientTabs")
+          navigation.navigate("DrawerNavigator")
           }}
         >
           <Text style={parameters.buttonTitle}>SIGN IN</Text>

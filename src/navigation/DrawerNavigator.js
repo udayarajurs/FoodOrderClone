@@ -2,6 +2,7 @@ import * as React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import RootClientTabs from './ClientTabs';
 import { colors } from '../global/styles';
+import { Icon } from 'react-native-elements/dist/icons/Icon';
 
 const Drawer = createDrawerNavigator()
 
@@ -17,6 +18,7 @@ export default function DrawerNavigator(){
 
              options = {{
                 title:'Client',
+                headerShown: false,
                 drawerIcon: ({focussed,size}) =>(
                     <Icon 
                         type = "material-community"

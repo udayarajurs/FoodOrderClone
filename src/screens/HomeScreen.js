@@ -18,7 +18,7 @@ export default function HomeScreen({navigation}){
 
     return(
         <View style={styles.container}>
-            <HomeHeader/>
+            <HomeHeader navigation ={navigation}/>
         <ScrollView
             stickyHeaderIndices={[0]}
             showsVerticalScrollIndicator = {false}

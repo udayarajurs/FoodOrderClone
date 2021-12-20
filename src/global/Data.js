@@ -10,8 +10,8 @@ export const filterData = [{name:"Fast food",image: require('../assets/fastfood.
 
 
 
-export const filterData2 = [{name:"Fast food",image:'https://bukasapics.s3.us-east-2.amazonaws.com/chicken.png' , id:"0"},
-{name:"Burgers",image: 'https://bukasapics.s3.us-east-2.amazonaws.com/macdo.png',id:"1"},
+export const filterData2 = [{name:"Fast food",image:'https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload.jfif?alt=media&token=792cd3d2-71f5-416e-a219-7a2b54f9decf' , id:"0"},
+{name:"Burgers",image: 'https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fistockphoto-1188412964-612x612.jpg?alt=media&token=1ecbe2fe-477f-4faf-9c9c-8cab52a35c4a',id:"1"},
 {name:"Salads",image:"https://bukasapics.s3.us-east-2.amazonaws.com/nandos.png",id:"2"},
 {name:"Hotdog",image: "https://bukasapics.s3.us-east-2.amazonaws.com/pizza.png",id:"3"},
 {name:"Chinese",image:"https://bukasapics.s3.us-east-2.amazonaws.com/pizza6.png",id:"4"},

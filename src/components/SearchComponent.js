@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import {Icon} from 'react-native-elements';
 import {colors} from "../global/styles"
 import { filterData } from '../global/Data';
+import { filter } from 'lodash';
 
 
 export default function SearchComponent(){
@@ -15,6 +16,22 @@ export default function SearchComponent(){
     const [ modalVisible , setModalVisible ] = useState(false)
     const [textInputFossued,setTextInputFossued] = useState(true)
     const textInput = useRef(0)
+
+    const contains = ({name},query)=>{
+        if(name.includes(query)){
+            return true
+        }
+        return false
+    }
+    
+    
+    const handleSearch = text =>{
+        const dataS = filter(filterData, userSearch =>{
+            return contains(userSearch,text.slice(0).toUpperCase())
+        })
+    
+        setData([...dataS])
+    }
 
     return(
         <View style={{alignItems:'center'}}>
@@ -61,6 +78,16 @@ export default function SearchComponent(){
                     placeholder=''
                     autoFocus={false}
                     ref={textInput}
+
+                    onFocus={() =>{
+                        setTextInputFossued(true)
+                    }}
+
+                    onBlur={() =>{
+                        setTextInputFossued(false)
+                    }}
+
+                    onChangeText={handleSearch}
                 />
 
             <Animatable.View

@@ -12,14 +12,14 @@ export const filterData = [{name:"Fast food",image: require('../assets/fastfood.
 
 export const filterData2 = [{name:"Fast food",image:'https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload.jfif?alt=media&token=792cd3d2-71f5-416e-a219-7a2b54f9decf' , id:"0"},
 {name:"Burgers",image: 'https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fistockphoto-1188412964-612x612.jpg?alt=media&token=1ecbe2fe-477f-4faf-9c9c-8cab52a35c4a',id:"1"},
-{name:"Salads",image:"https://bukasapics.s3.us-east-2.amazonaws.com/nandos.png",id:"2"},
-{name:"Hotdog",image: "https://bukasapics.s3.us-east-2.amazonaws.com/pizza.png",id:"3"},
-{name:"Chinese",image:"https://bukasapics.s3.us-east-2.amazonaws.com/pizza6.png",id:"4"},
-{name:"Mexican",image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate1.png",id:"5"},  
-{name:"Sea food",image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate2.png",id:"6"},
-{name:"Chinese Food",image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate3.png",id:"7"},
-{name:"Mexican pie",image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate4.png",id:"8"},  
-{name:"Ocean dish",image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate5.png",id:"9"},
+{name:"Salads",image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload.jfif?alt=media&token=294e1123-faf4-4fd9-a17f-6aa26a461733",id:"2"},
+{name:"Hotdog",image: "https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload%20(1).jfif?alt=media&token=bd002cfd-0a37-4cfd-a587-ab68888a65ee",id:"3"},
+{name:"Chinese",image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload.jfif?alt=media&token=dc637f52-bc7b-4a5b-9d1d-4b71c51a69c9",id:"4"},
+{name:"Mexican",image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload%20(1).jfif?alt=media&token=a11724f0-7331-4954-ba00-1e026c57049d",id:"5"},  
+{name:"Sea food",image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fistockphoto-1305699663-612x612.jpg?alt=media&token=00420d0a-883b-4fff-a474-dc76dfbe7e2f",id:"6"},
+{name:"Chinese Food",image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdepositphotos_14773785-stock-photo-hot-chinese-food-with-steam.jpg?alt=media&token=c1a359c5-362a-4c60-ad02-9f49f32d915e",id:"7"},
+{name:"Mexican pie",image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload.jfif?alt=media&token=e7f13605-f0be-47b0-9399-0712b3aa94a1",id:"8"},  
+{name:"Ocean dish",image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2F41688512671_181b6a35c5_b.jpg?alt=media&token=12196f04-ecd1-41dc-bfbd-fa9cab2ead1d",id:"9"},
 ];
 
 

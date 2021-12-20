@@ -32,7 +32,7 @@ export default function SearchScreeen({navigation}){
                                 >
                                     
                                 <View style ={styles.textView}>
-                                    <Text style ={{color:colors.cardBackground}}>{item.name}</Text>
+                                    <Text style ={{color:colors.cardBackground , fontWeight:'bold'}}>{item.name}</Text>
                                 </View>
                                 </ImageBackground>  
                             </View>
@@ -78,7 +78,7 @@ const Footer = ()=>{
                                 >
                                     
                                 <View style ={styles.textView}>
-                                    <Text style ={{color:colors.cardbackground}}>{item.name}</Text>
+                                    <Text style ={{color:colors.cardBackground , fontWeight:'bold'}}>{item.name}</Text>
                                 </View>
                                 </ImageBackground>  
                             </View>
@@ -116,6 +116,7 @@ const styles = StyleSheet.create({
         image :  {     height:SCREEN_WIDTH*0.4475,
                         width:SCREEN_WIDTH*0.4475,
                         borderRadius:10, 
+
         },
         
         listHeader : {  fontSize:16,

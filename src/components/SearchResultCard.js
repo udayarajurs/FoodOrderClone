@@ -3,6 +3,10 @@ import { StyleSheet, Text, View,ImageBackground,TouchableOpacity,FlatList } from
 import {Icon} from 'react-native-elements'
 
 import {colors} from "../global/styles";
+import ProductCard from './ProductCard';
+
+
+
 
 const SearchResultCard = ({
     OnPressRestaurantCard,
@@ -17,50 +21,82 @@ const SearchResultCard = ({
     images,
     productData
 }) => {
+
+
     return (
         <View>
-           <View style={styles.view1}>
-                <View style={{height:150}}>
-                    <ImageBackground
-                        style={{height:160}}
-                        source={{uri:images}}
+            <TouchableOpacity onPress ={OnPressRestaurantCard}>
+            <View style ={styles.view1}>
+                <View style ={{height:150}}>
+                    <ImageBackground 
+                        style = {{height:160}}
+                        source ={{uri:images}}
                         imageStyle = {styles.imageStyle}
                     />
-                </View>
 
-                 <View style ={styles.image}>                
+                  <View style ={styles.image}>                
                       <Text style ={styles.text1}>{averageReview}</Text>
                       <Text style ={styles.text2}> {numberOfReview} reviews</Text>
                   </View>
 
-            <View style={styles.view3}>
-                  <View style={{paddingTop:5}}>
-                      <Text style={styles.text5}>{restaurantName}</Text>
-                  </View>
-                  <View style={{flexDirection:'row'}}>
-                        <View style={styles.view4}>
-                        <Icon 
-                            name ="place"
-                            type ="material"
-                            color ={colors.CardComment}
-                            size ={18}
-                            iconStyle ={{marginTop:3,marginLeft:-3}}
+                </View>
+
+
+                <View style ={styles.view3}>
+                    <View style ={{paddingTop:5}}>
+                        <Text style ={styles.text5}>{restaurantName}</Text>    
+                    </View>
+                    
+                    <View style ={{flexDirection:"row"}}>
+                        <View style ={styles.view4}>
+                            <Icon 
+                                name ="place"
+                                type ="material"
+                                color ={colors.CardComment}
+                                size ={18}
+                                iconStyle ={{marginTop:3,marginLeft:-3}}
                             />
 
-                            <Text style={styles.view5}>{farAway}Min</Text>
+                            <Text style ={styles.view5}>{farAway}Min</Text>
                         </View>
-                        <View style={{flex:9}}>
-                            <Text style={styles.text6}>{businessAddress}</Text>
+                        <View style ={{flex:9}}>
+                            <Text style ={styles.text6}>{businessAddress}</Text>
                         </View>
-                  </View>
+                        
+                    </View>
+                    
+                </View>
+
+              
+            </View>
+          
+            </TouchableOpacity>
+            <View style ={{marginTop:5,paddingBottom:20}}>
+
+            <FlatList
+                style ={{backgroundColor:colors.cardbackground}}
+                data = {productData}
+                keyExtractor ={(item,index)=>index.toString()}
+                renderItem ={({item,index})=> (
+                            <ProductCard 
+                            image = {item.image}
+                            productName ={item.name}
+                            price ={item.price}
+                              />
+                )}
+                horizontal ={true}
+                showsHorizontalScrollIndicator={false}
+            />
+               
             </View>
 
-           </View>
+
         </View>
     )
 }
 
 export default SearchResultCard
+
 
 const styles = StyleSheet.create({
 

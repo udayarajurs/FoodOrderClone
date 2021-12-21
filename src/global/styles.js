@@ -11,7 +11,8 @@ export const colors = {
   headerText: 'white',
   statusbar: '#ff8c52',
   lightgreen: '#66DF48',
-  pagebackground: '#000'
+  pagebackground: '#000',
+  CardComment : '#86939e',
 };
 
 export const parameters = {

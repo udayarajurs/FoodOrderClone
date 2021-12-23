@@ -31,9 +31,9 @@ export const filterData2 = [{name:"Fast food",image:'https://firebasestorage.goo
                   businessAddress:"22 Bessie street, Cape Town",images:'https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fteaser_image_487008.jpg?alt=media&token=6cd5816a-68e9-4733-8836-ef7b53d65cb6',
                   averageReview:4.9,numberOfReview:272,coordinates : {lat: -26.1888612, lng: 28.246325} ,discount:10,deliveryTime:15,
                   collectTime:5, foodType:"Burgers, Wraps,Milkshakes..." ,
-                  productData:[{name:"Hand cut chips", price:29.30,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate5.png"},
-                  {name:"Big Mac", price:50.80,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate4.png"},{name:"Chicken Burger",
-                   price:70,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate3.png"},
+                  productData:[{name:"Hand cut chips", price:29.30,image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload.jfif?alt=media&token=792cd3d2-71f5-416e-a219-7a2b54f9decf"},
+                  {name:"Big Mac", price:50.80,image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2F41688512671_181b6a35c5_b.jpg?alt=media&token=12196f04-ecd1-41dc-bfbd-fa9cab2ead1d"},{name:"Chicken Burger",
+                   price:70,image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdepositphotos_14773785-stock-photo-hot-chinese-food-with-steam.jpg?alt=media&token=c1a359c5-362a-4c60-ad02-9f49f32d915e"},
                     ],
                   id:0},
                   
@@ -41,9 +41,9 @@ export const filterData2 = [{name:"Fast food",image:'https://firebasestorage.goo
                   images:'https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload.jfif?alt=media&token=2bcff6a5-8c51-4abd-bdd3-7c5ff2fb7525',
                   averageReview:4.3, numberOfReview:306, coordinates : {lat: -26.1891648, lng: 28.2441808},
                   discount:20,deliveryTime:30,collectTime:10, foodType:"Chicken,Chicken wings... ",
-                  productData:[{name:"Hand cut chips", price:29.30,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate5.png"},
-                  {name:"Big Mac", price:50.80,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate4.png"},
-                  {name:"Chicken Burger", price:70,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate3.png"},
+                  productData:[{name:"Hand cut chips", price:29.30,image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload.jfif?alt=media&token=792cd3d2-71f5-416e-a219-7a2b54f9decf"},
+                  {name:"Big Mac", price:50.80,image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdepositphotos_14773785-stock-photo-hot-chinese-food-with-steam.jpg?alt=media&token=c1a359c5-362a-4c60-ad02-9f49f32d915e"},
+                  {name:"Chicken Burger", price:70,image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload%20(1).jfif?alt=media&token=a11724f0-7331-4954-ba00-1e026c57049d"},
                       ],
                   id:1},
                   
@@ -51,9 +51,9 @@ export const filterData2 = [{name:"Fast food",image:'https://firebasestorage.goo
                   images:'https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fimages.jfif?alt=media&token=cf963d3f-da67-4be8-81cb-da9ed50da00e',
                    coordinates :{ lat: -26.1886781, lng: 28.244879}, averageReview: 4.9,numberOfReview: 1272,
                     discount:12, deliveryTime:25,collectTime:15,foodType:"Flame grilled beef Burgers",
-                   productData:[{name:"Hand cut chips", price:29.30,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate5.png"},
-                    {name:"Big Mac", price:50.80,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate4.png"},{name:"Chicken Burger",
-                     price:70,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate3.png"},
+                   productData:[{name:"Hand cut chips", price:29.30,image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2F41688512671_181b6a35c5_b.jpg?alt=media&token=12196f04-ecd1-41dc-bfbd-fa9cab2ead1d"},
+                    {name:"Big Mac", price:50.80,image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fistockphoto-1188412964-612x612.jpg?alt=media&token=1ecbe2fe-477f-4faf-9c9c-8cab52a35c4a"},{name:"Chicken Burger",
+                     price:70,image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload.jfif?alt=media&token=e7f13605-f0be-47b0-9399-0712b3aa94a1"},
                       ],
                    id:2},
                   
@@ -61,26 +61,26 @@ export const filterData2 = [{name:"Fast food",image:'https://firebasestorage.goo
                   images:'https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fimages%20(1).jfif?alt=media&token=2654d9b0-2122-4fe6-b6c0-62753eb4f518',
                   averageReview:4.3, numberOfReview:700, coordinates: {lat: -26.1845336, lng: 28.2481691},
                   discount:null,deliveryTime:20,collectTime:10,foodType:"Chicken pizza, Vegetarian pizza...",
-                  productData:[{name:"Hand cut chips", price:29.30,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate5.png"},
-                    {name:"Big Mac", price:50.80,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate4.png"},{name:"Chicken Burger",
-                     price:70,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate3.png"},
+                  productData:[{name:"Hand cut chips", price:29.30,image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload%20(1).jfif?alt=media&token=a11724f0-7331-4954-ba00-1e026c57049d"},
+                    {name:"Big Mac", price:50.80,image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload.jfif?alt=media&token=e7f13605-f0be-47b0-9399-0712b3aa94a1"},{name:"Chicken Burger",
+                     price:70,image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdepositphotos_14773785-stock-photo-hot-chinese-food-with-steam.jpg?alt=media&token=c1a359c5-362a-4c60-ad02-9f49f32d915e"},
                       ],
                   id:3},
                   ]
     
 
 
-              export const productData = [{name:"Hand cut chips", price:29.30,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate5.png",
+              export const productData = [{name:"Hand cut chips", price:29.30,image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fistockphoto-1188412964-612x612.jpg?alt=media&token=1ecbe2fe-477f-4faf-9c9c-8cab52a35c4a",
               details:"Two 100% fresh beef burger patties that are hot,deliciously",id:0},
-                {name:"Big Mac", price:50.80,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate4.png",
+                {name:"Big Mac", price:50.80,image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload.jfif?alt=media&token=792cd3d2-71f5-416e-a219-7a2b54f9decf",
                 details:"McFeast features two 100% fresh beef burger patties that are hot",id:1},
-                {name:"Chicken Burger", price:70,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate3.png",details:"",id:2},
+                {name:"Chicken Burger", price:70,image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload%20(1).jfif?alt=media&token=bd002cfd-0a37-4cfd-a587-ab68888a65ee",details:"",id:2},
                 
-                {name:"Hand cut chips", price:29.30,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate4.png",
+                {name:"Hand cut chips", price:29.30,image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload%20(1).jfif?alt=media&token=a11724f0-7331-4954-ba00-1e026c57049d",
                 details:"Two 100% fresh beef burger patties that are hot,deliciously",id:3},
-                {name:"Big Mac", price:70.20,image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate1.png",
+                {name:"Big Mac", price:70.20,image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdepositphotos_14773785-stock-photo-hot-chinese-food-with-steam.jpg?alt=media&token=c1a359c5-362a-4c60-ad02-9f49f32d915e",
                 details:"McFeast features two 100% fresh beef burger patties that are hot",id:4},
-                {name:"Chicken Burger", price:70,image:"https://bukasapics.s3.us-east-2.amazonaws.com/chicken.png",details:"",id:5},
+                {name:"Chicken Burger", price:70,image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2F41688512671_181b6a35c5_b.jpg?alt=media&token=12196f04-ecd1-41dc-bfbd-fa9cab2ead1d",details:"",id:5},
               
                   ];   
                   

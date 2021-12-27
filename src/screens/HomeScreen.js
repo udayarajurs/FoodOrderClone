@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 
-import { View , Text , StyleSheet , TouchableOpacity , ScrollView , FlatList , Pressable , Image , Dimensions} from "react-native";
+import { View , Text , StyleSheet , TouchableOpacity , ScrollView , FlatList , Pressable , Image , Dimensions , StatusBar} from "react-native";
 import { Icon } from  'react-native-elements';
 import HomeHeader from "../components/HomeHeader";
 import { colors } from './../global/styles';

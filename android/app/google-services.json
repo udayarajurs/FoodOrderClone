@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "249349939312",
+    "project_id": "foodorderclone",
+    "storage_bucket": "foodorderclone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249349939312:android:1d83c85e486e89dd3dd4b5",
+        "android_client_info": {
+          "package_name": "com.foodorderclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "249349939312-90binfqio9ti7h6sre8marutcjjnqhjd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.foodorderclone",
+            "certificate_hash": "7c65976502eccedc1f5380e036563e70aca5692d"
+          }
+        },
+        {
+          "client_id": "249349939312-libvqis38qon5o1hrbr1v0ohe3dh5uoj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhF8Rb1esJbmt2yi22hqj6puUyLJZf_G0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "249349939312-libvqis38qon5o1hrbr1v0ohe3dh5uoj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

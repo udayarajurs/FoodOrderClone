@@ -5,9 +5,7 @@ import { restaurantsData } from '../global/Data';
 import {colors,fonts} from '../global/styles';
 import {Icon} from 'react-native-elements'
 import { TabView,TabBar } from 'react-native-tab-view';
-// import MenuScreen from './RestaurantTabs/MenuScreen';
-
-
+import MenuScreen from './RestaurantTabs/MenuScreen';
 
 const SCREEN_WIDTH = Dimensions.get('window').width
 const initialLayout = SCREEN_WIDTH;
@@ -23,7 +21,7 @@ const RestaurantHomeScreen = ({navigation,route}) => {
     ])
 
     const [index,setIndex] = useState(0)
-    
+
     const renderTabBar = props =>(
         <TabBar 
             {...props}
@@ -37,8 +35,6 @@ const RestaurantHomeScreen = ({navigation,route}) => {
     )
 
 
-   
-
     const UpdateRoute1 =()=>{
         return(
             <View>
@@ -51,6 +47,7 @@ const RestaurantHomeScreen = ({navigation,route}) => {
         navigation.navigate("MenuProductScreen")
     }
 
+    
 
 
     return (
@@ -105,11 +102,22 @@ const RestaurantHomeScreen = ({navigation,route}) => {
                      />
                 </View> 
 
-                {/* {index === 0 &&
+                {index === 0 &&
                     <MenuScreen onPress = {menuPressed}/>
-                } */}
+                }
 
             </ScrollView>
+
+            <TouchableOpacity>
+            <View style ={styles.view11}>
+                <View style ={styles.view12}>
+                    <Text style ={styles.text13}> View Cart</Text>
+                    <View style ={styles.view13}>
+                        <Text style ={styles.text13}>0</Text>
+                    </View>
+                </View>
+            </View>
+        </TouchableOpacity>
         </View>
     )
 }
@@ -118,8 +126,7 @@ export default RestaurantHomeScreen
 
 const styles = StyleSheet.create({
 
-    container:{flex:1,
-            paddingTop:20
+    container:{flex:1
         },
     
     view1:{
@@ -301,7 +308,8 @@ const styles = StyleSheet.create({
     text14:{fontWeight:"bold",
             marginLeft:40,
             color:colors.black,
-            fontSize:18
+            fontSize:18,
+            color: '#FFF'
         },
     
     view15:{marginTop:5,

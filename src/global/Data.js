@@ -124,7 +124,7 @@ export const filterData2 = [{name:"Fast food",image:'https://firebasestorage.goo
             { 
               meal:"Big Mac",
               price:70.20,
-              image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate1.png",
+              image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2F41688512671_181b6a35c5_b.jpg?alt=media&token=12196f04-ecd1-41dc-bfbd-fa9cab2ead1d",
               details:"McFeast features two 100% fresh beef burger patties that are hot",
               preferenceTitle:["Choose your 2 dips","Choose your 1st drink flavour", "Choose your 2nd drink flavour","Would you like to add a side?","Would you Like any extra sauce?"  ],
               preferenceData: [
@@ -160,7 +160,7 @@ export const filterData2 = [{name:"Fast food",image:'https://firebasestorage.goo
             { 
               meal:"Hand cut chips", 
               price:29.30,
-              image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate4.png",
+              image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload.jfif?alt=media&token=792cd3d2-71f5-416e-a219-7a2b54f9decf",
               details:"Two 100% fresh beef burger patties that are hot,deliciously",
               preferenceTitle:["Choose your 2 dips","Choose your 1st drink flavour", "Choose your 2nd drink flavour","Would you like to add a side?","Would you Like any extra sauce?"  ],
               preferenceData: [
@@ -196,7 +196,7 @@ export const filterData2 = [{name:"Fast food",image:'https://firebasestorage.goo
             {
               meal:"Chicken Burger",
               price:45.70,
-              image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate3.png",
+              image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload%20(1).jfif?alt=media&token=bd002cfd-0a37-4cfd-a587-ab68888a65ee",
               details:"",
               preferenceTitle:["Choose your 2 dips","Choose your 1st drink flavour", "Choose your 2nd drink flavour","Would you like to add a side?","Would you Like any extra sauce?"  ],
               preferenceData: [
@@ -233,7 +233,7 @@ export const filterData2 = [{name:"Fast food",image:'https://firebasestorage.goo
             {
               meal:"Big Mac",
               price:50.80,
-              image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate4.png",
+              image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdownload%20(1).jfif?alt=media&token=a11724f0-7331-4954-ba00-1e026c57049d",
               details:"McFeast features two 100% fresh beef burger patties that are hot",
               preferenceTitle:["Choose your 2 dips","Choose your 1st drink flavour", "Choose your 2nd drink flavour","Would you like to add a side?","Would you Like any extra sauce?"  ],
               preferenceData: [
@@ -272,7 +272,7 @@ export const filterData2 = [{name:"Fast food",image:'https://firebasestorage.goo
               
               meal:"Hand cut chips", 
               price:29.30,
-              image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate5.png",
+              image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2Fdepositphotos_14773785-stock-photo-hot-chinese-food-with-steam.jpg?alt=media&token=c1a359c5-362a-4c60-ad02-9f49f32d915e",
               details:"Two 100% fresh beef burger patties that are hot,deliciously",
               
               preferenceTitle:["Choose your 2 dips","Choose your 1st drink flavour", "Choose your 2nd drink flavour","Would you like to add a side?","Would you Like any extra sauce?"  ],
@@ -311,7 +311,7 @@ export const filterData2 = [{name:"Fast food",image:'https://firebasestorage.goo
             { 
               meal:"Big Mac",
               price:70.20,
-              image:"https://bukasapics.s3.us-east-2.amazonaws.com/plate1.png",
+              image:"https://firebasestorage.googleapis.com/v0/b/my-bill-35a47.appspot.com/o/Food%20Data%2F41688512671_181b6a35c5_b.jpg?alt=media&token=12196f04-ecd1-41dc-bfbd-fa9cab2ead1d",
               details:"McFeast features two 100% fresh beef burger patties that are hot",
               preferenceTitle:["Choose your 2 dips","Choose your 1st drink flavour", "Choose your 2nd drink flavour","Would you like to add a side?","Would you Like any extra sauce?"  ],
               preferenceData: [

@@ -7,8 +7,6 @@ import {Icon} from 'react-native-elements'
 import { TabView,TabBar } from 'react-native-tab-view';
 import MenuScreen from './RestaurantTabs/MenuScreen';
 
-
-
 const SCREEN_WIDTH = Dimensions.get('window').width
 const initialLayout = SCREEN_WIDTH;
 const RestaurantHomeScreen = ({navigation,route}) => {
@@ -23,7 +21,7 @@ const RestaurantHomeScreen = ({navigation,route}) => {
     ])
 
     const [index,setIndex] = useState(0)
-    const [modelVisible , setModelVisible] = useState(false);
+
     const renderTabBar = props =>(
         <TabBar 
             {...props}
@@ -37,8 +35,6 @@ const RestaurantHomeScreen = ({navigation,route}) => {
     )
 
 
-   
-
     const UpdateRoute1 =()=>{
         return(
             <View>
@@ -48,10 +44,10 @@ const RestaurantHomeScreen = ({navigation,route}) => {
     }
 
     const menuPressed =()=>{
-        // navigation.navigate("MenuProductScreen")
-        setModelVisible(true);
+        navigation.navigate("MenuProductScreen")
     }
 
+    
 
 
     return (
@@ -122,20 +118,6 @@ const RestaurantHomeScreen = ({navigation,route}) => {
                 </View>
             </View>
         </TouchableOpacity>
-
-        <Modal visible={modelVisible} animationType='slide'>
-            <View style={styles.view14}>
-                        <Icon 
-                            name ="arrow-left"
-                            type = "material-community"
-                            color = '#FFF'
-                            size = {25}
-                            onPress ={()=> setModelVisible(false)}
-                        />
-                        <Text style={styles.text14}>Menu</Text>
-            </View>
-        </Modal>
-
         </View>
     )
 }

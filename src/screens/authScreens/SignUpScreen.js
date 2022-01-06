@@ -1,11 +1,186 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { colors } from '../../global/styles';
+import React, {useState} from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  TextInput,
+  Alert,
+} from 'react-native';
+import {colors} from '../../global/styles';
+import Header from '../../components/Header';
+import {Formik} from 'formik';
+import {Icon, Button} from 'react-native-elements';
+import * as Animatable from 'react-native-animatable';
+import auth from '@react-native-firebase/auth';
 
-const SignUpScreen = () => {
+const initialValues = {
+  phone_number: '',
+  name: '',
+  family_name: '',
+  password: '',
+  email: '',
+  username: '',
+};
+
+const SignUpScreen = ({navigation}) => {
+  const [passwordFocussed, setPassordFocussed] = useState(false);
+  const [passwordBlured, setPasswordBlured] = useState(false);
+
+  async function signUp(values) {
+    const {email, password} = values;
+
+    try {
+      await auth().createUserWithEmailAndPassword(email, password);
+      console.log('USER ACCOUNT CREATED');
+    } catch (error) {
+      if (error.code === 'auth/email-already-in-use') {
+        Alert.alert('That email address is already inuse');
+      } else if (error.code === 'auth/invalid-email') {
+        Alert.alert('That email address is invalid');
+      } else {
+        Alert.alert(error.code);
+      }
+    }
+  }
+
   return (
     <View style={styles.container}>
-      <Text>SignUpScreen</Text>
+      <Header title="MY ACCOUNT" type="arrow-left" navigation={navigation} />
+      <ScrollView keyboardShouldPersistTaps="always">
+        <View style={styles.view1}>
+          <Text style={styles.text1}>Sign-Up</Text>
+        </View>
+        <Formik
+          initialValues={initialValues}
+          onSubmit={values => {
+            signUp(values);
+          }}>
+          {props => (
+            <View style={styles.view2}>
+              <View>
+                <Text style={styles.text2}>New on FoddOrderClone</Text>
+              </View>
+              <View style={styles.view6}>
+                <TextInput
+                  placeholder="Mobile Number"
+                  style={styles.input1}
+                  keyboardType="numeric"
+                  autoFocus={true}
+                  onChangeText={props.handleChange('phone_number')}
+                  value={props.values.phone_number}
+                />
+              </View>
+              <View style={styles.view6}>
+                <TextInput
+                  placeholder="Name"
+                  style={styles.input1}
+                  autoFocus={false}
+                  onChangeText={props.handleChange('name')}
+                  value={props.values.name}
+                />
+              </View>
+              <View style={styles.view6}>
+                <TextInput
+                  placeholder="Family name"
+                  style={styles.input1}
+                  autoFocus={false}
+                  onChangeText={props.handleChange('family_name')}
+                  value={props.values.family_name}
+                />
+              </View>
+              <View style={styles.view10}>
+                <View>
+                  <Icon
+                    name="email"
+                    style={styles.email}
+                    color={colors.grey3}
+                    type="material"
+                  />
+                </View>
+                <View style={styles.view11}>
+                  <TextInput
+                    placeholder="Email"
+                    style={styles.input4}
+                    autoFocus={false}
+                    onChangeText={props.handleChange('email')}
+                    value={props.values.email}
+                  />
+                </View>
+              </View>
+              <View style={styles.view14}>
+                <Animatable.View
+                  animation={passwordFocussed ? 'fadeInRight' : 'fadeInLeft'}
+                  duration={400}>
+                  <Icon name="lock" color={colors.grey3} type="material" />
+                </Animatable.View>
+                <TextInput
+                  placeholder="Password"
+                  style={{flex: 1}}
+                  autoFocus={false}
+                  onChangeText={props.handleChange('password')}
+                  value={props.values.password}
+                  onFocus={() => {
+                    setPassordFocussed(true);
+                  }}
+                  onBlur={() => {
+                    setPasswordBlured(true);
+                  }}
+                />
+                <Animatable.View
+                  animation={passwordBlured ? 'fadeInLeft' : 'fadeInRight'}
+                  duration={400}>
+                  <Icon
+                    name="visibility-off"
+                    color={colors.grey3}
+                    type="material"
+                    style={{marginRight: 10}}
+                  />
+                </Animatable.View>
+              </View>
+              <View style={styles.view15}>
+                <Text style={styles.text3}>
+                  By creating or logging into an account you are
+                </Text>
+                <View style={styles.view16}>
+                  <Text style={styles.text3}>agreeing with our </Text>
+                  <Text style={styles.text4}> Terms & Conditions</Text>
+                  <Text style={styles.text3}> and </Text>
+                </View>
+                <Text style={styles.text4}> Privacy Statement</Text>
+              </View>
+              <View style={styles.view17}>
+                <Button
+                  title="Create my account"
+                  buttonStyle={styles.button1}
+                  titleStyle={styles.title1}
+                  onPress={props.handleSubmit}
+                />
+              </View>
+            </View>
+          )}
+        </Formik>
+        <View style={styles.view18}>
+          <Text style={styles.text5}>OR</Text>
+        </View>
+        <View style={styles.view19}>
+          <View style={styles.view20}>
+            <Text style={styles.text6}>
+              Already have an account with XpressFood ?
+            </Text>
+          </View>
+          <View style={styles.view21}>
+            <Button
+              title="Sign-In"
+              buttonStyle={styles.createButton}
+              titleStyle={styles.createButtonTitle}
+              onPress={() => {
+                navigation.navigate('SignInScreen');
+              }}
+            />
+          </View>
+        </View>
+      </ScrollView>
     </View>
   );
 };
@@ -14,7 +189,24 @@ export default SignUpScreen;
 
 const styles = StyleSheet.create({
   container: {flex: 1, backgroundColor: 'white'},
-
+  createButton: {
+    backgroundColor: 'white',
+    alignContent: 'center',
+    justifyContent: 'center',
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#ff8c52',
+    height: 40,
+    paddingHorizontal: 20,
+  },
+  createButtonTitle: {
+    color: '#ff8c52',
+    fontSize: 16,
+    fontWeight: 'bold',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: -3,
+  },
   view1: {
     justifyContent: 'center',
     alignItems: 'flex-start',
@@ -149,7 +341,9 @@ const styles = StyleSheet.create({
     paddingTop: 15,
   },
 
-  text5: {fontSize: 15, fontWeight: 'bold'},
+  text5: {fontSize: 15, fontWeight: 'bold', marginTop: -10},
+
+  text6: {alignSelf: 'center', justifyContent: 'center'},
 
   view19: {backgroundColor: 'white', paddingHorizontal: 15},
 
@@ -166,7 +360,8 @@ const styles = StyleSheet.create({
     borderColor: colors.background2,
     height: 40,
     paddingHorizontal: 20,
-    // width:'100%'
+    // width: '50%',
+    marginTop: 10,
   },
 
   title2: {

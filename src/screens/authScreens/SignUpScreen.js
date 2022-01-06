@@ -133,7 +133,6 @@ const SignUpScreen = ({navigation}) => {
                   <Icon
                     name="visibility-off"
                     color={colors.grey3}
-                    type="material"
                     style={{marginRight: 10}}
                   />
                 </Animatable.View>

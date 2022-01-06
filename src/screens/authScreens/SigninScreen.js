@@ -10,10 +10,10 @@ import {
 } from 'react-native';
 import {colors, parameters} from '../../global/styles';
 import {Icon, Button, SocialIcon} from 'react-native-elements';
-import { Formik } from 'formik';
+import {Formik} from 'formik';
 import Header from '../../components/Header';
 import * as Animatable from 'react-native-animatable';
-import auth from '@react-native-firebase/auth'
+import auth from '@react-native-firebase/auth';
 
 export default function SigninScreen({title, navigation}) {
   const [textInput2Fossued, setTextInput2Fossued] = useState(false);
@@ -21,18 +21,15 @@ export default function SigninScreen({title, navigation}) {
   const textInput1 = useRef(1);
   const textInput2 = useRef(2);
 
-  async function signIn(data){
-    try{
-      const {password,email} = data
-      const user = await auth().signInWithEmailAndPassword(email,password)
-      if(user){
-        console.log("USER SIGNED-IN")
+  async function signIn(data) {
+    try {
+      const {password, email} = data;
+      const user = await auth().signInWithEmailAndPassword(email, password);
+      if (user) {
+        console.log('USER SIGNED-IN');
       }
-    }catch(error){
-      Alert.alert(
-        error.name,
-        error.message
-      )
+    } catch (error) {
+      Alert.alert(error.name, error.message);
     }
   }
 
@@ -54,14 +51,13 @@ export default function SigninScreen({title, navigation}) {
       </View>
 
       <Formik
-        initialValues={{email:'' , password: ''}}
-        onSubmit={(values)=>{
-            signIn(values)
-        }}
-      >
-      { (props) =>
-      <View>
-      <View style={{marginTop: 20}}>
+        initialValues={{email: '', password: ''}}
+        onSubmit={values => {
+          signIn(values);
+        }}>
+        {props => (
+          <View>
+            <View style={{marginTop: 20}}>
               <View>
                 <TextInput
                   style={Styles.TextInput1}
@@ -76,7 +72,11 @@ export default function SigninScreen({title, navigation}) {
                 <Animatable.View
                   animation={setTextInput2Fossued ? '' : 'fadeInLeft'}
                   duration={400}>
-                  <Icon name="lock" iconStyle={{color: '#86939e'}} type="material" />
+                  <Icon
+                    name="lock"
+                    iconStyle={{color: '#86939e'}}
+                    type="material"
+                  />
                 </Animatable.View>
                 <TextInput
                   style={{width: '80%'}}
@@ -108,16 +108,15 @@ export default function SigninScreen({title, navigation}) {
               <TouchableOpacity
                 style={parameters.styledButton}
                 onPress={
-                 // navigation.navigate('DrawerNavigator');
-                 props.handleSubmit
+                  // navigation.navigate('DrawerNavigator');
+                  props.handleSubmit
                 }>
                 <Text style={parameters.buttonTitle}>SIGN IN</Text>
               </TouchableOpacity>
             </View>
-            </View> }
+          </View>
+        )}
       </Formik>
-
-     
 
       <View style={{alignItems: 'center', marginTop: 15}}>
         <Text style={{...Styles.text1, textDecorationLine: 'underline'}}>
@@ -158,6 +157,9 @@ export default function SigninScreen({title, navigation}) {
           title="Create an account"
           buttonStyle={Styles.createButton}
           titleStyle={Styles.createButtonTitle}
+          onPress={() => {
+            navigation.navigate('SignUpScreen');
+          }}
         />
       </View>
     </View>

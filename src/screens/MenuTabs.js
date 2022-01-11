@@ -14,7 +14,7 @@ export function Route1({navigation}) {
           renderItem={({item, index}) => (
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate('PreferenceScreen', {index});
+                navigation.navigate('PreferenceScreen' , {index}); // 
               }}>
               <MenuCard
                 productName={item.meal}

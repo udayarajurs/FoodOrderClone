@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef , useEffect , useContext} from 'react';
 import {
   View,
   Text,
@@ -10,10 +10,25 @@ import {
 } from 'react-native';
 import {colors, parameters} from '../../global/styles';
 import {Icon, Button, SocialIcon} from 'react-native-elements';
-
+import {SignInContext} from '../../contexts/authContext';
+import auth from '@react-native-firebase/auth';
 import Swiper from 'react-native-swiper';
 
 export default function SigninWelcomeScreen({title, navigation}) {
+
+    const {dispatchSignedIn} = useContext(SignInContext);
+
+    useEffect(()=>{
+      auth().onAuthStateChanged((user)=>{
+        if(user){
+          dispatchSignedIn({type:"UPDATE_SIGN_IN",payload:{userToken:"signed-in"}})
+        }else{
+          dispatchSignedIn({type:"UPDATE_SIGN_IN",payload:{userToken:null}})
+        }
+      })
+      
+    },[])
+
   return (
     <View style={{flex: 1}}>
       <View

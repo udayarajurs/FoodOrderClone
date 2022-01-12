@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { Text, StyleSheet, View,ScrollView,Image,Platform } from 'react-native'
+import { Text, StyleSheet, View,ScrollView,Image,Platform , TouchableOpacity } from 'react-native'
 import {colors} from '../global/styles'
 import {
     Icon,
@@ -18,7 +18,9 @@ export default class  extends Component {
           preference:menuDetailedData[this.props.route.params.index].preferenceData,
           required:menuDetailedData[this.props.route.params.index].required,
           minimum_quantity :menuDetailedData[this.props.route.params.index].minimum_quatity,
+          counter:menuDetailedData[this.props.route.params.index].counter
         }
+       
       }
    
     render() {
@@ -87,6 +89,35 @@ export default class  extends Component {
                           </View>
                           <View style ={styles.view10}>
                               {item.map(items => 
+                              <TouchableOpacity key={item.id}
+                                  onPress={() => {
+                                    const id = this.preference.indexOf(item)
+                                    if(this.state.minimum_quantity[id] !== null){
+                                      const check = item.filter(item => item.checked?item:null);
+                                      this.state.preference[id].forEach(i=>{
+                                        if(i.id === item.id){
+                                          if(check.length <this.state.minimum_quantity[id]){
+                                            i.checked = !i.checked
+                                          }else{
+                                            i.checked = false
+                                          }
+                                        }
+                                      })
+                                      this.state.counter[id] = this.state.counter[id] + 1;
+                                      this.setState({
+                                        preference:[...this.state.preference],
+                                        counter:[...this.state.counter]
+                                      })
+                                    }else{
+                                      this.state.preference[id].forEach(i=>{
+                                        if(i.id === item.id){
+                                          i.checked = !i.checked 
+                                        }
+                                      })
+                                      this.state({preference:[...this.state.preference]})
+                                    }
+                                  }}
+                              >
                                 <View style ={styles.view4}>
                                       <View style ={styles.view19}>
                                           <View style ={styles.view6}>
@@ -94,7 +125,7 @@ export default class  extends Component {
                                                 center
                                                 checkedIcon = "check-square-o"
                                                 uncheckedIcon = "square-o"
-                                                checked ={false}
+                                                checked ={item.checked}
                                                 checkedColor ={colors.buttons}
 
                                               />
@@ -103,7 +134,8 @@ export default class  extends Component {
                                           <Text style ={styles.text6}>R{items.price.toFixed(2)}</Text>
                                       </View>
                                   </View>
-                     )}
+                                </TouchableOpacity>
+                          )}
                           </View>
                        </View>)
 

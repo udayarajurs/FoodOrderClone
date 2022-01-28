@@ -13,6 +13,7 @@ import {Icon, Button, SocialIcon} from 'react-native-elements';
 import {SignInContext} from '../../contexts/authContext';
 import auth from '@react-native-firebase/auth';
 import Swiper from 'react-native-swiper';
+import LottieView from 'lottie-react-native';
 
 export default function SigninWelcomeScreen({title, navigation}) {
 
@@ -44,6 +45,19 @@ export default function SigninWelcomeScreen({title, navigation}) {
         <Text style={{fontSize: 16, color: colors.buttons, fontWeight: 'bold'}}>
           IN YOUR AREA
         </Text>
+      </View>
+
+      <View style={{height: 150 , width: 300}}>
+      <LottieView
+                  resizeMode="cover"
+                  // ref={(animation) => {
+                  //   this.animation = animation;
+                  // }}
+                  source={require('./animation.json')}
+                  autoPlay
+                  loop
+                />
+     
       </View>
 
       <View style={{flex: 4, justifyContent: 'center'}}>

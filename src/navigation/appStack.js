@@ -16,6 +16,7 @@ export function AppStack() {
           ...TransitionPresets.RevealFromBottomAndroid,
         }}
       />
+      
 
       <App.Screen
         name="RestaurantMapScreen"

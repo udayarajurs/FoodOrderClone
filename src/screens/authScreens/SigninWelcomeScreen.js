@@ -1,4 +1,4 @@
-import React, {useState, useRef , useEffect , useContext} from 'react';
+import React, {useState, useRef, useEffect, useContext} from 'react';
 import {
   View,
   Text,
@@ -13,22 +13,22 @@ import {Icon, Button, SocialIcon} from 'react-native-elements';
 import {SignInContext} from '../../contexts/authContext';
 import auth from '@react-native-firebase/auth';
 import Swiper from 'react-native-swiper';
-import LottieView from 'lottie-react-native';
 
 export default function SigninWelcomeScreen({title, navigation}) {
+  const {dispatchSignedIn} = useContext(SignInContext);
 
-    const {dispatchSignedIn} = useContext(SignInContext);
-
-    useEffect(()=>{
-      auth().onAuthStateChanged((user)=>{
-        if(user){
-          dispatchSignedIn({type:"UPDATE_SIGN_IN",payload:{userToken:"signed-in"}})
-        }else{
-          dispatchSignedIn({type:"UPDATE_SIGN_IN",payload:{userToken:null}})
-        }
-      })
-      
-    },[])
+  useEffect(() => {
+    auth().onAuthStateChanged(user => {
+      if (user) {
+        dispatchSignedIn({
+          type: 'UPDATE_SIGN_IN',
+          payload: {userToken: 'signed-in'},
+        });
+      } else {
+        dispatchSignedIn({type: 'UPDATE_SIGN_IN', payload: {userToken: null}});
+      }
+    });
+  }, []);
 
   return (
     <View style={{flex: 1}}>
@@ -47,18 +47,7 @@ export default function SigninWelcomeScreen({title, navigation}) {
         </Text>
       </View>
 
-      <View style={{height: 150 , width: 300}}>
-      <LottieView
-                  resizeMode="cover"
-                  // ref={(animation) => {
-                  //   this.animation = animation;
-                  // }}
-                  source={require('./animation.json')}
-                  autoPlay
-                  loop
-                />
-     
-      </View>
+      <View style={{height: 150, width: 300}}></View>
 
       <View style={{flex: 4, justifyContent: 'center'}}>
         <Swiper autoplay={true}>

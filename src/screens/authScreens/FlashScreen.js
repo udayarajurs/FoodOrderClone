@@ -4,7 +4,7 @@ import React from 'react';
 const FlashScreen = ({navigation}) => {
     
   setTimeout(() => {
-    navigation.navigate('SigninWelcomeScreen');
+    navigation.navigate('SignInWelcomeScreen');
   }, 3000);
 
   return (

@@ -2,7 +2,10 @@ import React from 'react';
 
 import {View, Text, StyleSheet} from 'react-native';
 
-export default function BusinessConsoleScreen() {
+export default function BusinessConsoleScreen({navigation}) {
+
+
+
   return (
     <View style={styles.container}>
       <Text>BusinessConsoleScreen</Text>

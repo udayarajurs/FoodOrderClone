@@ -17,6 +17,7 @@ import Swiper from 'react-native-swiper';
 export default function SigninWelcomeScreen({title, navigation}) {
   const {dispatchSignedIn} = useContext(SignInContext);
 
+
   useEffect(() => {
     auth().onAuthStateChanged(user => {
       if (user) {

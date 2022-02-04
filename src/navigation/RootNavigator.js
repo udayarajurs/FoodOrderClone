@@ -14,13 +14,8 @@ export default function RootNavigator() {
 
   const {signedIn} = useContext(SignInContext);
 
-
-
-  
-
   return (
     <NavigationContainer>
-    
       {
         signedIn.userToken !== 'signed-in'?(
           <AuthStack />
@@ -28,8 +23,6 @@ export default function RootNavigator() {
           <AppStack />
         )
       }
-      
-     
     </NavigationContainer>
   );
 }

@@ -1,0 +1,2 @@
+react-native-animatable
+@react-native-firebase/auth

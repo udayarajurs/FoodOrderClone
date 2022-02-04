@@ -5,7 +5,6 @@ import {
 import SignInWelcomeScreen from '../screens/authScreens/SigninWelcomeScreen';
 import SignInScreen from '../screens/authScreens/SigninScreen';
 import SignUpScreen from '../screens/authScreens/SignUpScreen';
-import FlashScreen from '../screens/authScreens/FlashScreen';
 
 
 const Auth = createNativeStackNavigator();
